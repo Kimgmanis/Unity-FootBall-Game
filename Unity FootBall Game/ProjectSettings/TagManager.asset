@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Football
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ball
+  - Player
   - Water
   - UI
   - 
