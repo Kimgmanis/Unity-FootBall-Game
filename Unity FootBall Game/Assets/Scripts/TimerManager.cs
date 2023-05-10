@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimerManager : MonoBehaviour
 {
-    private float timeDuration = 3f * 60f;
+    public float timeDuration = 3f * 60f;
     private float timer;
 
     [SerializeField]
@@ -19,9 +20,6 @@ public class TimerManager : MonoBehaviour
     private TextMeshProUGUI firstSecond;
     [SerializeField]
     private TextMeshProUGUI secondSecond;
-
-    private float flashTimer;
-    private float flashDuration = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +34,11 @@ public class TimerManager : MonoBehaviour
         {
             timer -= Time.deltaTime;
             UpdateTimerDisplay(timer);
+        }
+
+        if(timer == 0)
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
