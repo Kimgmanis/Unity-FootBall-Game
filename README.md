@@ -5,5 +5,6 @@ WASD = Move
 SPACE = Jump
 ESC = Opens Menu during gameplay
 ## Level 1 is set and ready
-## Level 2 wip
+## Level 2 is set and playable
+win/lose state needs to be fixed
 ## Level 3 wip
